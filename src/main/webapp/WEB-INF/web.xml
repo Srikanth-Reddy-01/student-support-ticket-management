@@ -1,0 +1,87 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DashboardServlet</servlet-name>
+  	<display-name>DashboardServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.DashboardServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreateTicketServlet</servlet-name>
+  	<display-name>CreateTicketServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.CreateTicketServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MyTicketsServlet</servlet-name>
+  	<display-name>MyTicketsServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.MyTicketsServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StaffDashboardServlet</servlet-name>
+  	<display-name>StaffDashboardServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.StaffDashboardServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TicketDetailsServlet</servlet-name>
+  	<display-name>TicketDetailsServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.TicketDetailsServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateTicketServlet</servlet-name>
+  	<display-name>UpdateTicketServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.UpdateTicketServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ManagerDashboardServlet</servlet-name>
+  	<display-name>ManagerDashboardServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.assignment.controller.ManagerDashboardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DashboardServlet</servlet-name>
+  	<url-pattern>/DashboardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateTicketServlet</servlet-name>
+  	<url-pattern>/CreateTicketServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MyTicketsServlet</servlet-name>
+  	<url-pattern>/MyTicketsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StaffDashboardServlet</servlet-name>
+  	<url-pattern>/StaffDashboardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TicketDetailsServlet</servlet-name>
+  	<url-pattern>/TicketDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateTicketServlet</servlet-name>
+  	<url-pattern>/UpdateTicketServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ManagerDashboardServlet</servlet-name>
+  	<url-pattern>/ManagerDashboardServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
