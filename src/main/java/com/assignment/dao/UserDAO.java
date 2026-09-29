@@ -15,7 +15,6 @@ public class UserDAO {
         factory = HibernateUtil.getSessionFactory();
     }
 
-
     // Save user
     public void saveUser(User user) {
 
@@ -48,7 +47,6 @@ public class UserDAO {
             }
         }
     }
-
 
     // Login
     public User login(String email, String password) {
@@ -83,7 +81,6 @@ public class UserDAO {
         }
     }
 
-
     // Get user by ID
     public User getUserById(int id) {
 
@@ -99,6 +96,38 @@ public class UserDAO {
 
             e.printStackTrace();
             return null;
+
+        } finally {
+
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
+
+    // Check whether email already exists
+    public boolean emailExists(String email) {
+
+        Session session = null;
+
+        try {
+
+            session = factory.openSession();
+
+            String hql =
+                "SELECT COUNT(u) FROM User u WHERE u.email = :email";
+
+            Long count =
+                session.createQuery(hql, Long.class)
+                       .setParameter("email", email)
+                       .uniqueResult();
+
+            return count != null && count > 0;
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            return false;
 
         } finally {
 
