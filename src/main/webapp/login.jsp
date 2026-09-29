@@ -1,9 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 
     <meta charset="UTF-8">
-
     <title>Student Support System - Login</title>
 
     <style>
@@ -45,6 +47,25 @@
             text-align: center;
         }
 
+        .success {
+            color: green;
+            text-align: center;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 
 </head>
@@ -63,6 +84,18 @@
 
         <p class="error">
             Invalid email or password
+        </p>
+
+    <%
+        }
+
+        String registered = request.getParameter("registered");
+
+        if ("1".equals(registered)) {
+    %>
+
+        <p class="success">
+            Account created successfully. Please login.
         </p>
 
     <%
@@ -92,6 +125,16 @@
         </button>
 
     </form>
+
+    <div class="register-link">
+
+        New student?
+
+        <a href="register.jsp">
+            Create Student Account
+        </a>
+
+    </div>
 
 </div>
 
